@@ -8,3 +8,15 @@ install:
   - pip install -r requirements.txt
 script:
   - pytest
+
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  app: "polls"
+  env: "Polls-env"
+  bucket_name: "elasticbeanstalk-us-east-1-490004620598"
+  on:
+    branch: main 
