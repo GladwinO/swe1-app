@@ -1,6 +1,8 @@
+dist: focal
+
 language: python
 python:
-  - "3.10-dev"
+  - "3.13"
 # command to install dependencies
 install:
   - pip install -r requirements.txt
