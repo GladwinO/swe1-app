@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.13-dev"
+  - "3.10-dev"
 # command to install dependencies
 install:
   - pip install -r requirements.txt
