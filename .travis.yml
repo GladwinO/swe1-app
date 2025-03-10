@@ -11,6 +11,7 @@ script:
   - black --check .
   - flake8 --version
   - flake8 .
+  - coverage xml
 
 # After success, send coverage report to coveralls
 after_success:
