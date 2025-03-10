@@ -15,7 +15,7 @@ script:
 
 # After success, send coverage report to coveralls
 after_success:
-  - coveralls --verbose
+  - coveralls --service=github --branch=main --verbose
 
 
 deploy:
