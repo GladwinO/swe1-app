@@ -9,6 +9,8 @@ install:
 script:
   - pytest
   - black --check .
+  - flake8 --version
+  - flake8 .
 
 
 deploy:
