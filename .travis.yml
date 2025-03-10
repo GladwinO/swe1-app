@@ -8,17 +8,13 @@ install:
   - pip install -r requirements.txt
 script:
   - coverage run manage.py test
-  - coverage report
-  - coverage xml  # Required for Coveralls
   - black --check .
   - flake8 --version
   - flake8 .
 
 # After success, send coverage report to coveralls
 after_success:
-  - ls -la  # Debug: Ensure coverage files exist
-  - cat coverage.xml  # Debug: Print coverage XML
-  - coveralls --service=travis-ci --verbose
+  - coveralls
 
 
 deploy:
