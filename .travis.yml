@@ -7,10 +7,14 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - pytest
+  - coverage run manage.py test
   - black --check .
   - flake8 --version
   - flake8 .
+
+# After success, send coverage report to coveralls
+after_success:
+  - coveralls
 
 
 deploy:
